@@ -1,0 +1,7 @@
+DEPPR MVP
+
+database password: 5y8kpOrrnTvycSpD
+
+Project URL: https://xoultcbyxbbkkdljebic.supabase.co
+
+API key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhvdWx0Y2J5eGJia2tkbGplYmljIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjU5OTIwNzYsImV4cCI6MjA4MTU2ODA3Nn0.D91qZKuKiE4HeonhuWc8pmlZzVZRJS_3b_2vfAWfoJA

@@ -1,0 +1,136 @@
+/* ---------- Reset / base ---------- */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  background: #fafafa;
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; height: auto; display: block; }
+
+/* Make form controls comfortable on mobile (prevents iOS zoom) */
+input, select, button, textarea {
+  font-size: 16px;
+  padding: 10px 12px;
+}
+
+/* Better tap targets */
+button, a, input, select {
+  min-height: 44px;
+}
+
+/* ---------- Theme tokens ---------- */
+:root{
+  --bg:#fafafa;
+  --text:#0f172a;
+  --muted:#6b7280;
+  --card:#ffffff;
+  --border:#e5e7eb;
+
+  --brand:#0ea5e9;
+  --yes:#16a34a;
+  --no:#dc2626;
+
+  --radius:16px;
+}
+
+/* ---------- Layout helpers ---------- */
+main {
+  display: grid;
+  gap: 16px;
+}
+
+/* A/B grid becomes 1 column on small screens */
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+@media (min-width: 520px) {
+  .grid2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ---------- Cards ---------- */
+.card{
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow:
+    0 1px 2px rgba(0,0,0,.04),
+    0 10px 24px rgba(0,0,0,.06);
+}
+
+.card img {
+  border-radius: 14px;
+}
+
+/* ---------- Buttons ---------- */
+.btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-radius: 14px;
+  border: none;
+  font-weight: 700;
+  padding: 14px;
+  transition: transform .05s ease, opacity .15s ease, filter .15s ease;
+  user-select: none;
+}
+
+.btn:active { transform: scale(.98); }
+
+.btn:disabled{
+  opacity: .55;
+  cursor: not-allowed;
+}
+
+.btn-yes{ background: var(--yes); color:#fff; }
+.btn-no{  background: var(--no);  color:#fff; }
+.btn-neutral{
+  background: #f1f5f9;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+/* Make inline header buttons not stretch full width */
+.btn.inline {
+  width: auto;
+  padding: 10px 12px;
+}
+
+/* ---------- Badges ---------- */
+.badge{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--muted);
+}
+
+/* ---------- Typography ---------- */
+h1,h2,h3 { letter-spacing: .2px; margin: 0; }
+h1 { font-size: 22px; line-height: 1.2; }
+h2 { font-size: 20px; line-height: 1.25; }
+p  { margin: 0; }
+
+/* ---------- Utility ---------- */
+.mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+
+/* Hide email on small screens; show from 520px up */
+.hide-on-mobile { display: none; }
+@media (min-width: 520px) {
+  .hide-on-mobile { display: inline !important; }
+}
+
